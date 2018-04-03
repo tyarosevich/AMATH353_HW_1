@@ -16,8 +16,6 @@ f_list2 = zeros(length(t), length(x));
 
 for n = 1:length(t)
     f_list(n, :) = u_xt(x, t(n));
-
-
 end
 
 %%
@@ -34,3 +32,25 @@ end
 [M2, I2] = max(f_list(5, :));
 speed = x(I2) - x(I);
 speed
+%%
+% 3.)
+clc; clear all; close all;
+c = 1; k = 1;
+%f1 = @(x, t) 1./(1 + (x - c * t).^2);
+%f1 = @(x, t) 1./ (2 + cos(k * (x - c * t)));
+f1 = @(x, t) exp(-t) .* sin(x);
+
+x = -20:.1:20;
+t = 1:10;
+f_list = zeros(length(t), length(x));
+for n = 1:length(t)
+    f_list(n, :) = f1(x, t(n));
+end
+%%
+for n = 1:length(t)
+   plot(x, f_list(n, :))
+   xlim([-20 20])
+   ylim([-.2 1.2])
+   pause(.5) 
+   
+end

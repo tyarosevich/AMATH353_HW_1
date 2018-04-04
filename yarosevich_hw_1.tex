@@ -96,7 +96,22 @@ u(x,t) = \frac{1}{t}exp(-x - ct)^2)
     \includegraphics[width=75mm, scale=.8]{plot_1d.pdf}
 	\caption{$c = 10$, moving right with speed 1 and amplitude inversely proportional to $t$.}
 \end{figure}
+\section*{Part 2.)}
+\subsection*{a.)} 
+$v_{tt} - v_{xxx} = 0$
+\subsection*{b.)}
+Let $\alpha = \beta = 1$\\
 
-
+\noindent By linear differential operators, 
+\begin{equation}
+\begin{aligned}
+u_{3, tt} = u_{3, xxx} \\
+(u_{1} + u_{2})_{tt} = (u_{1} + u_{2})_{xxx}\\
+u_{1, tt} + u_{2, tt} = u_{1, xxx} + u_{2, xxx}\\
+u_{1, tt} + u_{2, tt} - u_{1, xxx} - u_{2, xxx} = 0\\
+u_{1, tt} - u_{1, xxx} + u_{2, tt} - u_{2, xxx}) = 0\\
+\end{aligned}
+\end{equation}
+Thus as hoped after plugging in $u_{3}$ we arrive at the sum of two homogeneous equations of the solutions $u_1$ and $u_2$.
 
 \end{document}

@@ -185,15 +185,15 @@ export_fig plot_1d.pdf
 % 3.)
 clc; clear all; close all;
 c = 1; k = 1;
-%f1 = @(x, t) 1./(1 + (x - c * t).^2);
-%f1 = @(x, t) 1./ (2 + cos(k * (x - c * t)));
-f1 = @(x, t) exp(-t) .* sin(x);
+%f = @(x, t) 1./(1 + (x - c * t).^2); % f1
+%f = @(x, t) 1./ (2 + cos(k * (x - c * t))); %f2
+%f = @(x, t) exp(-t) .* sin(x); %f3
 
 x = -20:.1:20;
 t = 1:10;
 f_list = zeros(length(t), length(x));
 for n = 1:length(t)
-    f_list(n, :) = f1(x, t(n));
+    f_list(n, :) = f(x, t(n));
 end
 %%
 for n = 1:length(t)
